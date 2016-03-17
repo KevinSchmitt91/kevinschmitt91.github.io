@@ -695,7 +695,7 @@ footer a:hover {
 	text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 	footer p,
 	footer a {
 		line-height: normal;
