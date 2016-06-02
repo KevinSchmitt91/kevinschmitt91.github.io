@@ -38,124 +38,33 @@ $(function() {
 	});
 });
 
-/* 
-	Funktion für ein aufklappendes Dropdown
-	Menu beim drüberfahren des Mauscursors
-	-> .dropdown .dropdown-menu
-*/
-$(document).ready(function(){
-    $('.dropdown').hover(function(){ 
-	  $('.dropdown-toggle', this).trigger('click');
-	}); 
-});
 
-
-/* 
-	Funktion zum abfragen ob der oberste Punkt eines
-	Elementes, den unteren Bildschirmrand erreicht hat
-*/
-function isScrolledIntoView(elem) {
-    var $window = $(window),
-        docViewTop = $window.scrollTop(),
-        docViewBottom = docViewTop + $window.height(),
-        elemTop = $(elem).offset().top,
-        elemBottom = elemTop + $(elem).outerHeight();
-        
-    return ((( elemTop >= docViewTop) && (elemTop <= docViewBottom)) || ((elemBottom >= docViewTop) && (elemBottom <= docViewBottom)) ) ;
+/**
+ * macht die Navbar nachdem sie den oberen Rand des Bildschirms erreich hat, fixed-top
+ * wenn Sie den Anchor Punkt (navbar-anchor) wieder am oberen Bildschirm Rand hat, wie die
+ * Navbar wieder statisch. (<div class="#navbar-anchor"></div> muss in der HTML Page enthalten sein)
+ */
+function sticky_relocate() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#navbar-anchor').offset().top;
+    if (window_top > div_top) {
+        $('.navbar').addClass('navbar-fixed-top');
+        $('.navbar-brand').fadeTo("fast",1);
+        $('#navbar-anchor').height($('.navbar').outerHeight());
+    } else {
+        $('.navbar').removeClass('navbar-fixed-top');
+        $('.navbar-brand').fadeTo("fast",0);
+        $('#navbar-anchor').height(0);
+    }
 }
 
-/* 
-	Funktion zum abfragen ob der oberste Punkt eines
-	Elementes, größer als der obersten Punkt des Bildschirmrands
-	ist
-*/
-function isOnTopOfView(elem) {
-    var $window = $(window),
-        docViewTop = $window.scrollTop(),
-        elemTop = $(elem).offset().top;
-        
-    return docViewTop > elemTop;
-}
-
-/* 
-	Funktion zum abfragen ob der oberste Punkt eines
-	Elementes, kleiner als der oberste Rand des
-	Bildschirms ist
-*/
-function isOverTopOfView(elem) {
-    var $window = $(window),
-        docViewTop = $window.scrollTop(),
-        elemTop = $(elem).offset().top;
-        
-    return docViewTop < elemTop;
-}
-
-/* 
-	Funktion für die Navigations Leiste 
-	Opacity 0.7 --> Opacity 1
-	Opacity 1   --> Opacity 0.7
-*/
-$(window).scroll(function() {
-	
-	if(isOnTopOfView('.welcome')) {
-		$('.navbar-inverse').css('background', 'rgba(245,245,220,1)');
-	}
-	
-	if(isOverTopOfView('.welcome')) {
-		$('.navbar-inverse').css('background', 'rgba(245,245,220,0.7)');
-		$(".navbar-inverse").hover(function() {
-		  $(this).css('background', 'rgba(245,245,220,1)');
-		});
-	}
-})
-
-
-/* 
-	Funktion für eine animierte Section 
-	im Zusammenspiel mit der CSS Klasse
-	onview -> .section-animate.onview
-*/
-$(window).scroll(function() {
-
-    $('.section-animate').each(function() {
-        if (isScrolledIntoView(this)) {
-            $(this).addClass('onview');
-        }
-    });
-    
-
+/**
+	* ruft die function sticky_relocate auf
+	*/
+$(function() {
+    $(window).scroll(sticky_relocate);
+    sticky_relocate();
 });
 
-/* 
-	Funktion für eine animierte Bilder 
-	im Zusammenspiel mit der CSS Klasse
-	onview -> .picture-animate.onview
-	mit einem Delay von 800
-*/
-$(window).scroll(function() {
 
-    $('.picture-animate').each(function() {
-        if (isScrolledIntoView(this)) {
-            $(this).addClass('onview').delay(800);
-        }
-    });
-    
-
-});
-
-/* 
-	Funktion für das einblenden der Buttons
-	im Zusammenspiel mit der CSS Klasse
-	onview -> .btn-animate.onview
-*/
-$(window).scroll(function() {
-
-    $('.btn-animate').each(function() {
-        if (isScrolledIntoView(this)) {
-            $(this).addClass('onview');
-        }
-    });
-    
-
-});
 
