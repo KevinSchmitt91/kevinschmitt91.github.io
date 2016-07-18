@@ -325,6 +325,26 @@ footer a:hover {
 	text-decoration: none;
 }
 
+/* == Scroll to Top Button == */
+.back-to-top {
+	 background: #9a3234;
+	 position: fixed;
+	 bottom:20px;
+	 right:20px;
+	 padding:0.75em;
+	 color: white;
+	 font-size: 20px;
+	-webkit-box-shadow: 0px 2px 5px 1px rgba(41,41,41,1);
+	-moz-box-shadow: 0px 2px 5px 1px rgba(41,41,41,1);
+	box-shadow: 0px 2px 5px 1px rgba(41,41,41,1);
+}
+
+.back-to-top:hover,
+.back-to-top:focus,
+.back-to-top:active {
+	 color: white;
+}
+
 /* == MEDIA QUERIES === */
 /* == SMARTPHONES == */
 @media screen and ( max-width: 768px ) {

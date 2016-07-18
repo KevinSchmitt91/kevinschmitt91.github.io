@@ -64,23 +64,47 @@ function sticky_relocate() {
 * fades the navbar-brand in and out if the window_top > div_top or window_top < div_top
 **/
 function navbar_opacity(window_top, div_top) {
-	console.log(window_top);
-    console.log(div_top);
 	if (window_top > div_top) {
 		$(".navbar-brand").fadeIn("slow");
-	}
-	
-	if (window_top < div_top) {
+	}else {
 		$(".navbar-brand").fadeOut("slow");
 	}
 }
 
+// blendet den back-zo-zop button aus und ein
+function backToTopFadeIn() {
+	var window_top = $(window).scrollTop();
+    var div_top = $('#service').offset().top;
+    
+    console.log(window_top);
+    console.log(div_top);
+    
+    if(window_top > div_top) {
+	    $(".back-to-top").fadeIn("slow");
+    }else{
+	    $(".back-to-top").fadeOut("slow");
+    }
+}
+
 /**
-	* ruft die function sticky_relocate auf
+	* ruft die function sticky_relocate und backToTopFadeIn
 	*/
 $(function() {
     $(window).scroll(sticky_relocate);
     sticky_relocate();
+    $(window).scroll(backToTopFadeIn);
+    backToTopFadeIn();
+});
+
+//jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
 });
 
 
