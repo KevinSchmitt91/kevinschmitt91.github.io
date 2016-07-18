@@ -483,5 +483,9 @@ footer a:hover {
 		margin: 0;
 		padding: 0;
 		margin-bottom: 10px;
+	}
+	
+	.back-to-top {
+		 padding: 0.4em;
 	}	
 }	
