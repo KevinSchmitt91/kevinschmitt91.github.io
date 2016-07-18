@@ -376,7 +376,9 @@ footer a:hover {
 		font-size: 14px;
 	}
 	
-	.navbar-inverse .navbar-toggle:hover {
+	.navbar-inverse .navbar-toggle:hover,
+	.navbar-inverse .navbar-toggle:focus,
+	.navbar-inverse .navbar-toggle:active {
     	background-color: transparent;
 	}
 	
