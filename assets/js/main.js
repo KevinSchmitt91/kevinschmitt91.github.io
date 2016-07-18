@@ -47,15 +47,32 @@ $(function() {
 function sticky_relocate() {
     var window_top = $(window).scrollTop();
     var div_top = $('#navbar-anchor').offset().top;
+    
+    navbar_opacity(window_top, div_top);
+     
     if (window_top > div_top) {
         $('.navbar').addClass('navbar-fixed-top');
-        $('.navbar-brand').fadeTo("fast",1);
         $('#navbar-anchor').height($('.navbar').outerHeight());
     } else {
         $('.navbar').removeClass('navbar-fixed-top');
-        $('.navbar-brand').fadeTo("fast",0);
         $('#navbar-anchor').height(0);
     }
+   
+}
+
+/**
+* fades the navbar-brand in and out if the window_top > div_top or window_top < div_top
+**/
+function navbar_opacity(window_top, div_top) {
+	console.log(window_top);
+    console.log(div_top);
+	if (window_top > div_top) {
+		$(".navbar-brand").fadeIn("slow");
+	}
+	
+	if (window_top < div_top) {
+		$(".navbar-brand").fadeOut("slow");
+	}
 }
 
 /**

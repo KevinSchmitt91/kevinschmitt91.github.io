@@ -61,7 +61,7 @@ p {
 
 /** PAGE-HEADER **/
 #page-header {
-	height: 150px;
+	min-height: 150px;
 	color: #676767;
 }
 
@@ -72,6 +72,12 @@ p {
 
 #page-header .page-header-img {
 	margin: 10px 10px;
+}
+
+#page-header .page-header-wrapper {
+	display: table; 
+	height: 150px; 
+	overflow: hidden;
 }
 
 #page-header .page-header-section {
@@ -96,15 +102,18 @@ p {
 	height: 80px;
 }
 
+.navbar .navbar-fixed {
+	position: relative !important;
+}
+
 .navbar .navbar-brand {
 	height: 70px;
 	padding: 0 0;
 	margin: 5px 10px;
-	opacity: 0;
 }
 
 .navbar .nav {
-	height: 80px;
+	min-height: 80px;
 	margin-left: 50px;
 }
 
@@ -123,21 +132,24 @@ p {
 
 /** HERO **/
 #hero {
-	height: 500px;
-	position: relative;
+	min-height: 500px;
+	position:inherit;
 	background: linear-gradient(
-                     rgba(20,20,20, .3), 
-                     rgba(20,20,20, .3)),
-                     url("http://placehold.it/1920x1080");
+                     rgba(20,20,20, .4), 
+                     rgba(20,20,20, .4)),
+                     url("../img/hero-bg.jpg");
 	background-size: cover;
-	background-position: center center;
+	background-position: center bottom;
+	background-attachment: fixed;
+	overflow: visible;
 }
 
 #hero .hero-wrapper {
 	text-align: center;
 	display: table;
-	height: 500px;
+	min-height: 500px;
 	width: 100%;
+	padding: 25px 0 25px 0;
 }
 
 #hero .hero-wrapper .hero-content {
@@ -310,3 +322,88 @@ footer a:hover {
 	font-weight: 800;
 	text-decoration: none;
 }
+
+/* == MEDIA QUERIES === */
+@media screen and ( max-width: 768px ) {
+	#page-header {
+		text-align: center;	
+	}
+	
+	#page-header .page-header-img {
+		height: 80px;
+		width: auto;
+	}
+	
+	#page-header .page-header-wrapper {
+		height: 30px;
+		padding: 5px 0px 5px 0px
+	}
+	
+	.navbar {
+		height: 56px;
+	}
+	
+	.navbar .navbar-brand {
+		height: 46px;
+	}
+	
+	.navbar .navbar-brand img {
+		height: 46px;
+		width: auto;
+	}
+	
+	.navbar .navbar-toggle {
+		border: none;
+	}
+	
+	.navbar .fa-bars {
+		font-size: 20px;
+	}
+	
+	.navbar .navbar-collapse {
+		background-color: #9a3234;
+		border: none;
+		border-top: 2px solid #676767;
+	}
+	
+	.navbar-inverse .navbar-nav>li {
+		height: 60px;
+	}
+	
+	.navbar-inverse .navbar-nav>li>a{
+		padding: 5px 0 5px 0;
+		min-height: 40px;
+		font-size: 14px;
+	}
+	
+	.navbar-inverse .navbar-toggle:hover {
+    	background-color: transparent;
+	}
+	
+	#hero {
+	    min-height: 300px;
+	}
+	
+	#hero .hero-wrapper {
+	    min-height: 300px;
+	}
+	
+	#hero .hero-wrapper .hero-content h5 {
+	    margin: 20px 0px;
+	    font-weight: 400;
+	}
+	
+	#hero .hero-wrapper .hero-content h1{
+	    font-size: 30px;
+	}
+	
+	#hero .hero-wrapper .hero-content h2 {
+		font-size: 26px;
+	}
+	
+	#hero .hero-wrapper .hero-content h5 {
+		font-size: 18px;
+		margin: 0px 10px;
+	}
+	
+}	
