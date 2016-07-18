@@ -172,7 +172,7 @@ p {
 
 /** SERVICE **/
 #service {
-	
+	background: white url('../img/meal.png') 95% 50% no-repeat;
 }
 
 #service .service-card {
@@ -182,7 +182,7 @@ p {
 
 #service .service-card .card-header {
 	background: #9a3234;
-	padding: 30px 10px;
+	padding: 20px 10px;
 	border-radius: 20px;
 }
 
@@ -192,7 +192,7 @@ p {
 }
 
 #service .service-card .card-body {
-	padding: 30px 20px;
+	padding: 30px 5px;
 	text-align: left;
 }
 
@@ -431,6 +431,15 @@ footer a:hover {
 		margin: 0px 10px;
 	}
 	
+	#service .container {
+		background: rgba(255,255,255,0.7);
+		padding: 20px; 
+	}
+
+	#service {
+		background: white url("../img/meal.png") 50% 50% no-repeat;
+	}
+	
 	.site-section {
     	padding: 25px 0;
 	}
@@ -488,4 +497,15 @@ footer a:hover {
 	.back-to-top {
 		 padding: 0.4em;
 	}	
+}
+
+@media screen and (max-width: 1200px) {
+	#service .container {
+		background: rgba(255,255,255,0.7);
+		padding: 20px; 
+	}
+
+	#service {
+		background: white url("../img/meal.png") 50% 50% no-repeat;
+	}
 }	
