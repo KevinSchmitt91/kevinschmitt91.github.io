@@ -107,14 +107,18 @@ p {
 }
 
 .navbar .navbar-brand {
-	height: 70px;
+	height: 50px;
 	padding: 0 0;
-	margin: 5px 10px;
+	margin: 12.5px 5px;
+}
+
+.navbar .navbar-brand img {
+	height: 50px;
+	width: auto;
 }
 
 .navbar .nav {
 	min-height: 80px;
-	margin-left: 50px;
 }
 
 .navbar-inverse .navbar-nav>li{
@@ -127,7 +131,7 @@ p {
 	font-size: 16px;
 	text-transform: uppercase;
 	line-height: 50px;
-	margin: 0 10px;
+	margin: 0 5px;
 }
 
 /** HERO **/
@@ -227,7 +231,14 @@ p {
 
 /** TEAM **/
 #team {
-	
+	background: linear-gradient(
+                     rgba(20,20,20, .4), 
+                     rgba(20,20,20, .4)),
+                     url("../img/team-bg.jpg");
+	background-size: cover;
+	background-position: center bottom;
+	background-attachment: fixed;
+	overflow: visible;
 }
 
 #team .team-content {
@@ -282,13 +293,21 @@ p {
 }
 
 #contact .btn-contact {
-	background: white;
-	border-radius: 20px;
-	color: #676767;
+	background: transparent;
+	border-radius: 10px;
+	border: 2px solid white;
+	color: white;
 	margin-top: 50px;
 	font-weight: 600;
 	font-size: 16px;
 	width: 120px;
+	-webkit-transition: color .2s, background .2s;
+}
+
+#contact .btn-contact:hover {
+	background: white;
+	color: #676767;
+	-webkit-transition: color .2s, background .2s;
 }
 
 footer {
@@ -345,6 +364,34 @@ footer a:hover {
 	 color: white;
 }
 
+/* === IMPRINT === */
+#imprint h5 {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#imprint .imprint-head {
+	font-weight: bold;
+	margin-top: 30px;
+}
+
+#imprint .imprint-link {
+	text-decoration: none;
+	color: #9a3234;
+}
+
+#imprint .imprint-link:hover,
+#imprint .imprint-link:focus,
+#imprint .imprint-link:active {
+	font-weight: bold;
+}
+
+#imprint .imprint-img {
+	width: 150px;
+	height: auto;
+}
+
+
 /* == MEDIA QUERIES === */
 /* == SMARTPHONES == */
 @media screen and ( max-width: 768px ) {
@@ -368,6 +415,9 @@ footer a:hover {
 	
 	.navbar .navbar-brand {
 		height: 46px;
+		padding: 0 0;
+		margin: 5px 5px;
+		margin-left: 10%;
 	}
 	
 	.navbar .navbar-brand img {
@@ -377,10 +427,12 @@ footer a:hover {
 	
 	.navbar .navbar-toggle {
 		border: none;
+		margin-right: 5%;
 	}
 	
 	.navbar .fa-bars {
 		font-size: 20px;
+		color: white;
 	}
 	
 	.navbar .navbar-collapse {
@@ -390,15 +442,18 @@ footer a:hover {
 	}
 	
 	.navbar-inverse .navbar-nav>li {
-		height: 60px;
+		min-height: 30px;
+		margin: 0 10%;
+		padding: 5px 0px;
 	}
 	
 	.navbar-inverse .navbar-nav>li>a{
 		padding: 5px 0 5px 0;
-		min-height: 40px;
+		min-height: 30px;
 		font-size: 14px;
+		line-height: 30px;
 	}
-	
+
 	.navbar-inverse .navbar-toggle:hover,
 	.navbar-inverse .navbar-toggle:focus,
 	.navbar-inverse .navbar-toggle:active {

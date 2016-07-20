@@ -74,7 +74,7 @@ function navbar_opacity(window_top, div_top) {
 // blendet den back-zo-zop button aus und ein
 function backToTopFadeIn() {
 	var window_top = $(window).scrollTop();
-    var div_top = $('#service').offset().top;
+    var div_top = $('#hero').offset().top;
     
     console.log(window_top);
     console.log(div_top);
