@@ -524,6 +524,10 @@ footer a:hover {
     	margin-bottom: 20px;
 	}
 	
+	#team {
+		background-size: auto;
+	}
+	
 	#team .person {
 		margin-bottom: 20px;
 	}
