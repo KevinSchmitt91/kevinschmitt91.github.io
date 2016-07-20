@@ -571,3 +571,9 @@ footer a:hover {
 		background: white url("../img/meal.png") 50% 50% no-repeat;
 	}
 }	
+
+@media (min-width: 992px) {
+   .collapse {
+       display: none !important;
+   }
+}
