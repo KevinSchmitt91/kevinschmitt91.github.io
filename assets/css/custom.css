@@ -90,6 +90,17 @@ p {
 	padding: 0 0;
 }
 
+#page-header .header-link {
+	text-decoration: none;
+	color: #9a3234;
+}
+
+#page-header .header-link:hover,
+#page-header .header-link:focus,
+#page-header .header-link:active {
+	font-weight: 800;
+}
+
 /** NAVBAR **/
 .navbar {
 	background: #9a3234;
@@ -364,7 +375,7 @@ footer a:hover {
 	 color: white;
 }
 
-/* === IMPRINT === */
+/* === Imprint === */
 #imprint h5 {
 	margin-top: 40px;
 	margin-bottom: 20px;
