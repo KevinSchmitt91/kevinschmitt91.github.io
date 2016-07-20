@@ -463,6 +463,7 @@ footer a:hover {
 	
 	#hero {
 	    min-height: 400px;
+	    background-size: auto;
 	}
 	
 	#hero .hero-wrapper {
