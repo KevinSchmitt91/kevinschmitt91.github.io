@@ -570,4 +570,13 @@ footer a:hover {
 	#service {
 		background: white url("../img/meal.png") 50% 50% no-repeat;
 	}
+	
+	#team {
+		background-size: auto;
+		background-position: center center;
+	}
+	
+	#hero {
+	    background-size: auto;
+	}
 }	
