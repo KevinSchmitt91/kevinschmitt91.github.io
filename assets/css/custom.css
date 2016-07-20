@@ -395,7 +395,7 @@ footer a:hover {
 
 /* == MEDIA QUERIES === */
 /* == SMARTPHONES == */
-@media screen and ( max-width: 768px ) {
+@media screen and ( max-width: 767px ) {
 	#page-header {
 		text-align: center;	
 	}
@@ -571,9 +571,3 @@ footer a:hover {
 		background: white url("../img/meal.png") 50% 50% no-repeat;
 	}
 }	
-
-@media (min-width: 992px) {
-   .collapse {
-       display: none !important;
-   }
-}
