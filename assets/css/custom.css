@@ -45,6 +45,8 @@ p {
 	min-height: 400px;
 	background-color: white;
 	display: table;
+	width: 100%;
+	background-color: transparent;
 }
 
 .content {
@@ -189,7 +191,6 @@ p {
 .navbar .navbar-brand img {
 	height: 50px;
 	width: auto;
-	margin: 5px 0px;
 }
 
 /** HERO **/
@@ -313,6 +314,132 @@ p {
 	margin-top: 35px;
 }
 
+/** PAGE-INFO **/
+#page-info {
+	background: linear-gradient(
+										 rgba(255,255,255, .6),
+										 rgba(255,255,255, .6)),
+										 url("../img/page-info-bg.png");
+	background-size: cover;
+	background-position: center top;
+	background-attachment: fixed;
+	overflow: visible;
+}
+
+#page-info .content-wrapper {
+	width: 40%;
+	margin: 0 auto;
+	position: relative;
+	background-color: transparent;
+}
+
+#page-info .content {
+	position: relative;
+	text-align: center;
+}
+
+#page-info p {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+/** NUMBERS **/
+#numbers {
+	background-color: #01B5AF;
+}
+
+#numbers .content h1 {
+	color: white;
+}
+
+#numbers .content h2,
+#numbers .content h3,
+#numbers .content i {
+	color: #4A4A4A;
+	margin: 5px 0;
+}
+
+#numbers .content i {
+	font-size: 34px;
+}
+
+#numbers .content {
+	text-align: center;
+}
+
+#numbers .number-card {
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	background-color: white;
+	margin: 0 auto;
+	display: table;
+}
+
+#numbers .number-card .number-card-content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/** IDEA **/
+#idea .fa-lightbulb-o {
+	font-size: 64px;
+	margin: 25px 0;
+}
+
+#idea {
+	text-align: center;
+}
+
+#idea .content-wrapper {
+	width: 50%;
+	margin: 0 auto;
+}
+
+#idea .divider-primary {
+	margin: 25px 0;
+}
+
+#idea a {
+	margin: 35px 0;
+}
+
+/** FOOTER **/
+footer {
+	min-height: 100px;
+	background-color: #4A4A4A;
+	color: white;
+	display: table;
+	width: 100%;
+	text-align: center;
+}
+
+footer .container {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+footer .social-links a {
+	font-size: 28px;
+	margin: 0 5px;
+	color: white;
+	transition: color 0.3s ease;
+}
+
+footer .important-links a {
+	font-size: 14px;
+	margin: 0 5px;
+	color: white;
+	transition: color 0.3s ease;
+}
+
+footer .social-links a:hover,
+footer .important-links a:hover {
+	color: #01B5AF;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
 /** ANIMATION **/
 
 @-webkit-keyframes bounce {
@@ -341,4 +468,24 @@ p {
 
 .bounce {
   animation:bounce 2s infinite;
+}
+
+/* == Scroll to Top Button == */
+.back-to-top {
+	background-color: #01B5AF;
+	 position: fixed;
+	 bottom:25px;
+	 right:25px;
+	 padding:5px;
+	 color: white;
+	 font-size: 20px;
+	-webkit-box-shadow: 0px 2px 5px 1px rgba(41,41,41,1);
+	-moz-box-shadow: 0px 2px 5px 1px rgba(41,41,41,1);
+	box-shadow: 0px 2px 5px 1px rgba(41,41,41,1);
+}
+
+.back-to-top:hover,
+.back-to-top:focus,
+.back-to-top:active {
+	 color: white;
 }
