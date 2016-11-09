@@ -239,7 +239,7 @@ p {
 
 /** HERO **/
 #hero {
-	height: 80%;
+	height: 100%;
 	position:inherit;
 	background: linear-gradient(
 										 rgba(255,255,255, .6),
@@ -556,6 +556,16 @@ footer .important-links a:hover {
 
 	#page-header .page-header-img {
 		float: none;
+	}
+
+	/** HERO **/
+	#hero .hero-content h1 {
+		font-size: 46px;
+		margin: 25px 15px;
+	}
+
+	#hero .hero-content h2{
+		font-size: 30px;
 	}
 
 	.hide-mobile {
