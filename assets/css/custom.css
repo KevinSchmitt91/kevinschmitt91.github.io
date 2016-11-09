@@ -109,7 +109,7 @@ p {
 
 /** HEADER **/
 #page-header {
-	height: 100px;
+	min-height: 100px;
 	background-color: #01B5AF;
 	color: white;
 	font-size: 16px;
@@ -136,11 +136,13 @@ p {
 	height: 100px;
 	width: auto;
 	padding: 10px 10px;
+	display: flex;
+	margin: 0 auto;
 }
 
 #page-header .page-header-wrapper {
 	display: table;
-	height: 100px;
+	min-height: 100px;
 }
 
 #page-header .page-header-section {
@@ -488,4 +490,26 @@ footer .important-links a:hover {
 .back-to-top:focus,
 .back-to-top:active {
 	 color: white;
+}
+
+
+/* == MEDIA QUERIES === */
+/* == SMARTPHONES == */
+@media screen and ( max-width: 767px ) {
+	/** PAGE-HEADER **/
+	#page-header p {
+		font-size: .7em;
+	}
+
+	#page-header .page-header-img {
+		height: 70px;
+	}
+
+	#page-header .page-header-wrapper {
+		min-height: 50px;
+	}
+
+	.hide-mobile {
+		display: none;
+	}
 }
