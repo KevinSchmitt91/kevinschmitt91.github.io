@@ -1,4 +1,4 @@
-/* 
+/*
 	Name:		KS-0.0.1.js
 	Version:	0.0.1
 	Author:		Kevin Schmitt
@@ -7,31 +7,31 @@
 
 /* ===================================================== */
 
-/* 
+/*
 	Funktion für scrollende Hintergrundbilder
 	-> section[data-type="background"]
 	-> speed="number"
 */
 $(function() {
-	
+
 	// Cache the window object
 	var $window = $(window);
-	
+
 	// Parallax background effect
 	$('section[data-type="background"]').each(function(){
-		
+
 		var $bgobj = $(this); // assigning the object
-		
+
 		$(window).scroll(function() {
-			
+
 			//scroll the background at var speed
 			//the yPs is a negative value because we're scrolling
-			
+
 			var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-			
+
 			// Put together our final background position
 			var coords = '50% ' + yPos + 'px';
-			
+
 			// Move the background
 			$bgobj.css({backgroundPosition: coords});
 		}); // end window scroll
@@ -47,9 +47,9 @@ $(function() {
 function sticky_relocate() {
     var window_top = $(window).scrollTop();
     var div_top = $('#navbar-anchor').offset().top;
-    
+
     navbar_opacity(window_top, div_top);
-     
+
     if (window_top > div_top) {
         $('.navbar').addClass('navbar-fixed-top');
         $('#navbar-anchor').height($('.navbar').outerHeight());
@@ -57,7 +57,7 @@ function sticky_relocate() {
         $('.navbar').removeClass('navbar-fixed-top');
         $('#navbar-anchor').height(0);
     }
-   
+
 }
 
 /**
@@ -75,10 +75,10 @@ function navbar_opacity(window_top, div_top) {
 function backToTopFadeIn() {
 	var window_top = $(window).scrollTop();
     var div_top = $('#hero').offset().top;
-    
+
     console.log(window_top);
     console.log(div_top);
-    
+
     if(window_top > div_top) {
 	    $(".back-to-top").fadeIn("slow");
     }else{
@@ -107,5 +107,26 @@ $(function() {
     });
 });
 
+//toogle fullscreen navbar overlay
+function openNav() {
+	var navbar = document.getElementById("myNav");
+	var bsNavbar = document.getElementById("bsNav");
+	navbar.style.height = "100%";
+	console.log(bsNavbar.classList.contains("navbar-fixed-top"));
+	if (bsNavbar.classList.contains("navbar-fixed-top")) {
+		bsNavbar.style.display= "none";
+	}
+}
 
+function closeNav() {
+	var navbar = document.getElementById("myNav");
+	var bsNavbar = document.getElementById("bsNav");
+	navbar.style.height = "0%";
+	setTimeout(function displayBSnavbar() {
+		console.log(bsNavbar.classList.contains("navbar-fixed-top"));
+		if (bsNavbar.classList.contains("navbar-fixed-top")) {
+			bsNavbar.style.display= "block";
+		}
+	},500);
 
+}

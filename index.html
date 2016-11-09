@@ -37,8 +37,18 @@
 	<body>
 		<!-- Header -->
 		<section id="page-header">
+			<div class="page-header-header">
+				<div class="container">
+					<div class="social-links">
+						<i class="social-desc">Besuchen Sie uns auf:    </i>
+						<a href="http://twitter.com/sgtadrael" target="_blank"><i class="fa fa-twitter"></i></a>
+						<a href="http://facebook.com/kevinschmitt.18" target="_blank"><i class="fa fa-facebook"></i></a>
+						<a href="http://youtube.com/sgtadrael" target="_blank"><i class="fa fa-youtube"></i></a>
+					</div><!--social-links -->
+				</div><!--container -->
+			</div><!-- page-header-header -->
       <div class="container">
-				<div class="col-sm-4 col-xs-12 page-header-wrapper">
+				<div class="col-sm-6 col-xs-12 page-header-wrapper">
 					<img class="page-header-img" src="assets/img/logo.png" alt="page-logo" />
 				</div>
 				<div class="hide-mobile">
@@ -57,29 +67,18 @@
 						</div><!-- page-header-section -->
 					</div>
 				</div><!-- hide-mobile -->
-				<div class="hide-mobile">
-					<div class="col-sm-2 col-xs-6 page-header-wrapper">
-						<div class="page-header-section">
-	            <div class="social-links">
-	              <a href="http://twitter.com/sgtadrael" target="_blank"><i class="fa fa-twitter"></i></a>
-	              <a href="http://facebook.com/kevinschmitt.18" target="_blank"><i class="fa fa-facebook"></i></a>
-	              <a href="http://youtube.com/sgtadrael" target="_blank"><i class="fa fa-youtube"></i></a>
-	            </div><!-- social-links -->
-						</div><!-- page-header-section -->
-					</div>
-				</div><!--hide-mobile -->
       </div>
 		</section> <!-- page-header -->
 
 
 		<!-- NAVBAR -->
 		<div id="navbar-anchor"></div>
-			<nav class="navbar navbar-inverse navbar-fixed" role="navigation">
+			<nav id="bsNav" class="navbar navbar-inverse navbar-fixed" role="navigation">
 
 				<div class="container">
 
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<button type="button" class="navbar-toggle" onclick="openNav()">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="fa fa-bars"></span>
 						</button>
@@ -87,15 +86,24 @@
 					</div><!-- navbar-header -->
 					<div class="navbar-collapse collapse cl-effect-17">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a class="page-scroll" href="#service">Startseite</a></li>
+							<li><a class="page-scroll" href="#service">Service</a></li>
 							<li><a class="page-scroll" href="#about">Prozess</a></li>
 							<li><a class="page-scroll" href="#team">Portfolio</a></li>
 							<li><a class="page-scroll" href="#contact">Kontakt</a></li>
 						</ul><!-- nav -->
 					</div><!-- navbar-collapse -->
 				</div><!-- container -->
-
 			</nav><!-- navbar -->
+			<!-- OVERLAY NAVBAR -->
+			<div id="myNav" class="overlay">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <div class="overlay-content">
+			    <a class="page-scroll" href="#service" onclick="closeNav()">Service</a>
+			    <a class="page-scroll" href="#about" onclick="closeNav()">Prozess</a>
+			    <a class="page-scroll" href="#team" onclick="closeNav()">Portfolio</a>
+			    <a class="page-scroll" href="#contact" onclick="closeNav()">Kontakt</a>
+			  </div><!-- overlay-content -->
+			</div><!-- myNav -->
 
     <!-- HERO -->
     <section id="hero">
@@ -273,7 +281,6 @@ der Kontaktseite und lassen Sie uns diese Partei erhalten begonnen .
 		<script src="assets/js/jquery-2.1.4.min.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/jquery.easing.min.js"></script>
-
 		<script src="assets/js/main.js"></script>
 
 	</body>
