@@ -497,6 +497,9 @@ footer .important-links a:hover {
 /* == SMARTPHONES == */
 @media screen and ( max-width: 767px ) {
 	/** PAGE-HEADER **/
+	#page-header {
+		min-height: 75px;
+	}
 	#page-header p {
 		font-size: .7em;
 	}
